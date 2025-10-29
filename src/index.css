@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 210 15% 20%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 210 15% 20%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 15% 20%;
+
+    /* Teal primary for trust and adventure */
+    --primary: 195 85% 45%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 195 85% 40%;
+
+    /* Light neutral secondary */
+    --secondary: 210 20% 96%;
+    --secondary-foreground: 210 15% 20%;
+
+    --muted: 210 15% 95%;
+    --muted-foreground: 210 10% 50%;
+
+    /* Coral accent for CTAs */
+    --accent: 16 90% 60%;
+    --accent-foreground: 0 0% 100%;
+    --accent-hover: 16 90% 55%;
+
+    /* Success green */
+    --success: 142 71% 45%;
+    --success-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 15% 88%;
+    --input: 210 15% 88%;
+    --ring: 195 85% 45%;
+
+    --radius: 0.75rem;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(195, 85%, 45%) 0%, hsl(195, 75%, 55%) 100%);
+    --gradient-card: linear-gradient(180deg, transparent 0%, hsla(0, 0%, 0%, 0.4) 100%);
+    
+    /* Shadows */
+    --shadow-card: 0 4px 20px -2px hsla(210, 15%, 20%, 0.08);
+    --shadow-card-hover: 0 8px 30px -4px hsla(210, 15%, 20%, 0.15);
+  }
+
+  .dark {
+    --background: 210 20% 10%;
+    --foreground: 0 0% 95%;
+
+    --card: 210 20% 12%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 210 20% 12%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 195 75% 50%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 195 75% 45%;
+
+    --secondary: 210 20% 18%;
+    --secondary-foreground: 0 0% 95%;
+
+    --muted: 210 20% 18%;
+    --muted-foreground: 210 10% 60%;
+
+    --accent: 16 85% 55%;
+    --accent-foreground: 0 0% 100%;
+    --accent-hover: 16 85% 50%;
+
+    --success: 142 65% 50%;
+    --success-foreground: 0 0% 100%;
+
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 20% 22%;
+    --input: 210 20% 22%;
+    --ring: 195 75% 50%;
+
+    --shadow-card: 0 4px 20px -2px hsla(0, 0%, 0%, 0.3);
+    --shadow-card-hover: 0 8px 30px -4px hsla(0, 0%, 0%, 0.5);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
