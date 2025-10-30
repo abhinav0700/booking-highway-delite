@@ -31,15 +31,12 @@ Follow these steps to set up the project locally:
 
 ```
 # Step 1: Clone the repository
-git clone <YOUR_GIT_URL>
+git clone https://github.com/abhinav0700/booking-highway-delite
 
-# Step 2: Navigate into the project directory
-cd <YOUR_PROJECT_NAME>
+# Step 2: Install dependencies
+npm install
 
-# Step 3: Install dependencies
-npm i
-
-# Step 4: Start the development server
+# Step 3: Start the development server
 npm run dev
 ```
 
