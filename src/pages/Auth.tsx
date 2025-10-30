@@ -7,7 +7,7 @@ import { Label } from "@/components/ui/label";
 import { Card } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { useToast } from "@/hooks/use-toast";
-import { Loader2, Chrome } from "lucide-react";
+import { Loader2 } from "lucide-react";
 
 const Auth = () => {
   const navigate = useNavigate();
@@ -74,26 +74,6 @@ const Auth = () => {
     }
   };
 
-  const handleGoogleAuth = async () => {
-    setLoading(true);
-    try {
-      const { error } = await supabase.auth.signInWithOAuth({
-        provider: "google",
-        options: {
-          redirectTo: `${window.location.origin}/`,
-        },
-      });
-      if (error) throw error;
-    } catch (error: any) {
-      toast({
-        title: "Error",
-        description: error.message,
-        variant: "destructive",
-      });
-      setLoading(false);
-    }
-  };
-
   return (
     <div className="min-h-screen bg-background flex items-center justify-center p-4">
       <Card className="w-full max-w-md p-8">
@@ -107,16 +87,6 @@ const Auth = () => {
               : "Sign up to start booking experiences"}
           </p>
         </div>
-
-        <Button
-          variant="outline"
-          onClick={handleGoogleAuth}
-          disabled={loading}
-          className="w-full mb-6 h-12"
-        >
-          <Chrome className="mr-2 h-5 w-5" />
-          Continue with Google
-        </Button>
 
         <div className="relative mb-6">
           <Separator />
